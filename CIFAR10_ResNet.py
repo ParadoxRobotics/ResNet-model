@@ -109,14 +109,13 @@ class ResNet(nn.Module):
         out = F.avg_pool2d(out, out.size()[3])
         return out
 
-# CNN based on the Donecle general classifier
 class Classifier(nn.Module):
     def __init__(self):
         super(Classifier, self).__init__()
         # Pretrained residual CNN
         # ResNet Image -> 64x64 + 3 channels RGB
         self.ResnetImage = ResNet(3, ResBlock, [5,5,5])
-        # Donecle classifier
+        # classifier
         self.feedforward = nn.Sequential(OrderedDict([
             # linear 1
             ('lin1', nn.Linear(64, 32)),
