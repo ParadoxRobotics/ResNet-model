@@ -1,2 +1,2 @@
 # ResNet-model
-Simple ResNet model in pytorch 
+Simple ResNet56 model in pytorch 
