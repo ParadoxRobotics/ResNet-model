@@ -69,7 +69,7 @@ class ResBlock(nn.Module):
         out = self.conv_1(x)
         out = self.bn_1(out)
         out = F.relu(out)
-        out = self.conv_2(out)7
+        out = self.conv_2(out)
         out = self.bn_2(out)
         out = F.relu(out)
         out = out + self.residual(x)
